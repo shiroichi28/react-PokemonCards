@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 :root {
   --font-quickSand: "Quicksand", sans-serif;
-  --font-poorStory: "Poor Story", cursive;
+  --green: #1bfd9c;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poor Story", cursive;
+  font-family: var(--font-quickSand);
 }
 body {
   background-color: #242424;
@@ -41,12 +41,10 @@ body {
   border-radius: 30px;
   margin-left: auto;
   font-weight: 400;
-  font-family: var(--font-quickSand);
 }
 .poke-name {
   text-align: center;
   font-weight: 600;
-  font-family: var(--font-quickSand);
 }
 .types {
   display: flex;
@@ -58,7 +56,6 @@ body {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
-  font-family: var(--font-quickSand);
 }
 .types span {
   padding: 5px 20px;
@@ -76,25 +73,33 @@ body {
   color: #404060;
 }
 button {
-  --green: #1BFD9C;
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
+  display: block;
+  padding: 15px 60px;
+  font-size: 18px;
   position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
+  margin: 30px auto;
+  border-radius: 25px;
+  letter-spacing: 0.06em;
   overflow: hidden;
   transition: all 0.3s;
   line-height: 1.4em;
   border: 2px solid var(--green);
-  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
   color: var(--green);
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
 }
 
 button:hover {
   color: #82ffc9;
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
 button:before {
@@ -104,8 +109,14 @@ button:before {
   width: 4em;
   height: 100%;
   top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(27, 253, 156, 0.1) 40%,
+    rgba(27, 253, 156, 0.1) 60%,
+    transparent 100%
+  );
 }
 
 button:hover:before {
